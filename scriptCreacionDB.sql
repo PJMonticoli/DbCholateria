@@ -168,3 +168,15 @@ CREATE TABLE `chocolateriaDB`.`ProductosPromocion`(
 	FOREIGN KEY (`idPromocion`) REFERENCES Promociones(id),
 	FOREIGN KEY (`idProducto`) REFERENCES Productos(id)
 );
+
+
+CREATE TABLE chocolateriaDB.MensajesContacto (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(50) NOT NULL,
+  apellido VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  telefono VARCHAR(20),
+  asunto VARCHAR(50) NOT NULL,
+  mensaje TEXT NOT NULL,
+  fechaEnvio DATETIME DEFAULT CURRENT_TIMESTAMP
+);
