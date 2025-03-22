@@ -241,6 +241,16 @@ BEGIN
     
 END //
 
+CREATE PROCEDURE spActualizarEstadoProducto(
+  IN id1 INT,
+  IN nuevoEstado BOOLEAN
+)
+BEGIN
+  UPDATE productos
+  SET activo = nuevoEstado
+  WHERE id = id1;
+
+
 -- DELETE logico
 CREATE PROCEDURE spBorrarProducto(
 IN id1 int
